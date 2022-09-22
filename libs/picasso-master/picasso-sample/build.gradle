@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+  compileSdkVersion versions.compileSdk
+
+  defaultConfig {
+    minSdkVersion versions.minSdk
+    targetSdkVersion versions.targetSdk
+    applicationId 'com.example.picasso'
+  }
+
+  buildFeatures {
+    compose true
+  }
+
+  composeOptions {
+    kotlinCompilerExtensionVersion "1.1.1"
+  }
+
+  compileOptions {
+    sourceCompatibility versions.sourceCompatibility
+    targetCompatibility versions.targetCompatibility
+  }
+
+  lintOptions {
+    lintConfig file('lint.xml')
+    textOutput 'stdout'
+    textReport true
+
+    // https://github.com/square/okhttp/issues/896
+    ignore 'InvalidPackage'
+  }
+}
+
+dependencies {
+  compileOnly deps.androidxAnnotations
+  implementation deps.androidxCore
+  implementation deps.androidxCursorAdapter
+  implementation deps.androidxFragment
+  implementation deps.androidxStartup
+
+  implementation deps.drawablePainter
+  implementation deps.composeUi
+  implementation deps.foundation
+
+  implementation project(':picasso')
+  implementation project(':picasso-stats')
+  implementation project(':picasso-compose')
+}

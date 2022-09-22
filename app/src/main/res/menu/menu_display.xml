@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.java.sun_di_wang_news.DisplayNewsActivity">
+    <item
+        android:id="@+id/action_set_favorite"
+        android:title="@string/action_favorite"
+        android:icon="@drawable/favorite_outline"
+        app:showAsAction="ifRoom" />
+</menu>

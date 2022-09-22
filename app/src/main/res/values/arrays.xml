@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="time_array">
+        <item>时间不限</item>
+        <item>一天内</item>
+        <item>一周内</item>
+        <item>一月内</item>
+        <item>一年内</item>
+    </string-array>
+
+    <string-array name="category_array">
+        <item>所有类别</item>
+        <item>娱乐</item>
+        <item>军事</item>
+        <item>教育</item>
+        <item>文化</item>
+        <item>健康</item>
+        <item>财经</item>
+        <item>体育</item>
+        <item>汽车</item>
+        <item>科技</item>
+        <item>社会</item>
+    </string-array>
+</resources>

@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.java.sun_di_wang_news.MainActivity">
+    <item
+        android:id="@+id/action_favorite"
+        android:title="@string/action_favorite"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_history"
+        android:title="@string/action_history"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/action_search_image"
+        android:title="@string/action_search"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_set_categories"
+        android:title="@string/action_set_categories"
+        app:showAsAction="never"/>
+</menu>

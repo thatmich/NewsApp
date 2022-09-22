@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/searchEditText"
+            android:paddingHorizontal="27dp"
+            android:autofillHints="Search"
+            tools:ignore="LabelFor"
+            android:inputType="text"
+            android:layout_weight="16"/>
+
+        <ImageButton
+            android:id="@+id/searchEnterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/action_search"
+            android:src="@drawable/action_search_image"
+            android:title="@string/action_search"
+            android:layout_weight="1"
+            android:background="@color/grey"
+            android:onClick="searchButtonHandler"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchFilterTime"
+            android:drawableLeft="@drawable/clock"
+            android:text="@string/time"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="11sp"
+            android:onClick="searchTimeHandler"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchFilterCategory"
+            android:drawableLeft="@drawable/filter"
+            android:text="@string/category"
+            android:textSize="11sp"
+            android:onClick="searchCategoryHandler"/>
+
+    </LinearLayout>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/search_fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
